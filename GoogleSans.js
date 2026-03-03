@@ -1,12 +1,9 @@
 // ==UserScript==
 // @name         Universal Google Sans
-// @namespace    violentmonkey
-// @version      4.0
+// @namespace    Violentmonkey
+// @version      1.0
 // @description  WorldWide
 // @author       iamhaunt
-// @match        *://*/*
-// @grant        GM_addStyle
-// @run-at       document-start
 // ==/UserScript==
 
 (function() {
@@ -49,3 +46,4 @@
         console.error("Font script failed to inject:", e);
     }
 })();
+
