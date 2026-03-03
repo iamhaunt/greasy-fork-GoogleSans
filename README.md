@@ -2,11 +2,11 @@
 
 
 
-Modern Typography: Replaces standard system fonts with Google Sans / Product Sans.
+Replaces standard system fonts with Google Sans
 
-Improved Readability: Optimized font-weight and spacing for a better browsing experience.
+Improved Readability
 
-Lightweight: Zero performance impact; works instantly upon page load.   
+Lightweight
 
 
 
