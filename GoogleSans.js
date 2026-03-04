@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Universal Google Sans
 // @namespace    Violentmonkey
-// @version      1.4
+// @version      1.0
 // @description  Apply Google Sans universally
 // @author       https://github.com/iamhaunt
 // @match        *://*/*
@@ -12,38 +12,25 @@
 (function() {
     'use strict';
 
-    const css = `
-        @import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
 
+    const fontCSS = `
         @font-face {
-            font-family: 'Google Sans Hybrid';
-            src: local('Google Sans'),
-                 local('Google Sans Regular'),
-                 local('Product Sans'),
-                 url('https://raw.githubusercontent.com/iamhaunt/greasy-fork-GoogleSans/main/GoogleSans-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+            font-family: 'Google Sans Custom';
+            src: url('https://raw.githubusercontent.com/iamhaunt/greasy-fork-GoogleSans/main/GoogleSans-Regular.ttf') format('truetype');
             font-display: swap;
         }
 
-        html, body, *:not([class*="icon"]):not([class*="fa-"]):not(i):not(svg):not(path) {
-            font-family: "Google Sans Hybrid", "Product Sans", "Google Sans", system-ui, -apple-system, sans-serif !important;
+        /* 2. Force apply to all elements and inputs */
+        *, *::before, *::after {
+            font-family: 'Google Sans Custom', sans-serif !important;
         }
     `;
 
-    function inject() {
-        if (!document.getElementById("universal-google-sans")) {
-            const style = document.createElement('style');
-            style.id = "universal-google-sans";
-            style.textContent = css;
-            (document.head || document.documentElement).appendChild(style);
-        }
+    if (typeof GM_addStyle !== 'undefined') {
+        GM_addStyle(fontCSS);
+    } else {
+        const style = document.createElement('style');
+        style.textContent = fontCSS;
+        document.head.append(style);
     }
-
-    inject();
-
-    const observer = new MutationObserver(inject);
-    observer.observe(document.documentElement, { childList: true, subtree: true });
-
-    window.addEventListener('load', inject);
 })();
