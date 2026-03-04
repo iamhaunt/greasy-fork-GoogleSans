@@ -1,9 +1,12 @@
 // ==UserScript==
 // @name         Universal Google Sans
 // @namespace    Violentmonkey
-// @version      1.0
-// @description  WorldWide
-// @author       iamhaunt
+// @version      1.4
+// @description  Apply Google Sans universally
+// @author       https://github.com/iamhaunt
+// @match        *://*/*
+// @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
@@ -44,4 +47,3 @@
 
     window.addEventListener('load', inject);
 })();
-
