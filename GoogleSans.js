@@ -10,6 +10,8 @@
     'use strict';
 
     const css = `
+        @import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
+
         @font-face {
             font-family: 'Google Sans Hybrid';
             src: local('Google Sans'),
@@ -21,24 +23,25 @@
             font-display: swap;
         }
 
-        *:not(i):not(svg):not(path):not([class*="icon"]):not([class*="fa-"]):not([class*="material"]):not([class*="glyph"]):not([class*="vjs-"]) {
-            font-family: "Google Sans Hybrid", system-ui, -apple-system, sans-serif !important;
-        }
-
-        body, div, span, p, a, input, button, textarea, select, .app-links, .page-content, .table-products {
-            font-family: "Google Sans Hybrid", sans-serif !important;
+        html, body, *:not([class*="icon"]):not([class*="fa-"]):not(i):not(svg):not(path) {
+            font-family: "Google Sans Hybrid", "Product Sans", "Google Sans", system-ui, -apple-system, sans-serif !important;
         }
     `;
 
-    try {
-        if (typeof GM_addStyle !== 'undefined') {
-            GM_addStyle(css);
-        } else {
+    function inject() {
+        if (!document.getElementById("universal-google-sans")) {
             const style = document.createElement('style');
+            style.id = "universal-google-sans";
             style.textContent = css;
             (document.head || document.documentElement).appendChild(style);
         }
-    } catch (e) {
-        console.error("Font script failed to inject:", e);
     }
+
+    inject();
+
+    const observer = new MutationObserver(inject);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+
+    window.addEventListener('load', inject);
 })();
+
