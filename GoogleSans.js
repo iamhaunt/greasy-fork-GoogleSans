@@ -21,15 +21,11 @@
             font-display: swap;
         }
 
-        *:not(i):not([class*="icon"]):not([class*="fa-"]):not([class*="material"]):not([class*="glyph"]):not([class*="vjs-"]) {
+        *:not(i):not(svg):not(path):not([class*="icon"]):not([class*="fa-"]):not([class*="material"]):not([class*="glyph"]):not([class*="vjs-"]) {
             font-family: "Google Sans Hybrid", system-ui, -apple-system, sans-serif !important;
         }
 
-        body, div, span, p, a, input, button, textarea, select {
-            font-family: "Google Sans Hybrid", sans-serif !important;
-        }
-
-        .app-links, .page-content, .table-products {
+        body, div, span, p, a, input, button, textarea, select, .app-links, .page-content, .table-products {
             font-family: "Google Sans Hybrid", sans-serif !important;
         }
     `;
@@ -46,4 +42,3 @@
         console.error("Font script failed to inject:", e);
     }
 })();
-
