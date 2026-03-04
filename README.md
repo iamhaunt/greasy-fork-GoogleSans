@@ -1,18 +1,11 @@
-                ✨ Features
+    ✨ FEATURES
+
+• Changing your browser font to Google Sans universally 
 
 
-
-1. Replaces standard system fonts with Google Sans
-
-
-         🛠 Installation
+    🛠️ INSTALLATIONS
 
 
-1. Install an UserScript manager like Violentmonkey 
+• Install [Violentmonkey](https://violentmonkey.github.io/)
 
-2. [Click the link here to install the script](https://greasyfork.org/en/scripts/568263-universal-google-sans)
-
-      
-
-
-   
+• [Click here to install the script](https://greasyfork.org/en/scripts/568263-universal-google-sans)
