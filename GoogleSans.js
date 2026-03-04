@@ -20,7 +20,6 @@
             font-display: swap;
         }
 
-        /* 2. Force apply to all elements and inputs */
         *, *::before, *::after {
             font-family: 'Google Sans Custom', sans-serif !important;
         }
@@ -34,3 +33,4 @@
         document.head.append(style);
     }
 })();
+
