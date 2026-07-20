@@ -8,4 +8,4 @@
 
 • Install [Violentmonkey](https://violentmonkey.github.io/)
 
-• [Click here to install the script](https://greasyfork.org/en/scripts/568491-universal-google-sans) or  [Click here to install the script](https://greasyfork.org/en/scripts/585445-universal-google-sans-600)
+• [Click here to install the script](https://greasyfork.org/en/scripts/568491-universal-google-sans) or  [Click here to install the script](https://greasyfork.org/en/scripts/585445-universal-google-sans-600) or [Click here to install the script](https://greasyfork.org/en/scripts/587864-universal-trebuchet-ms)
