@@ -8,5 +8,5 @@
 
 • Install [Violentmonkey](https://violentmonkey.github.io/)
 
-• [Google Sans](https://greasyfork.org/en/scripts/585445-universal-google-sans/post-install) or  [SF Pro](https://greasyfork.org/en/scripts/594614-universal-sf-pro)
+• [Google Sans](https://greasyfork.org/en/scripts/585445-universal-google-sans) or  [SF Pro](https://greasyfork.org/en/scripts/594614-universal-sf-pro)
 
